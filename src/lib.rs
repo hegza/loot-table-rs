@@ -17,7 +17,7 @@ impl<T> LootTable<T>
 where
     T: Item,
 {
-    fn from_equal_chance(items: &[T], seed: &[usize]) -> LootTable<T> {
+    pub fn from_equal_chance(items: &[T], seed: &[usize]) -> LootTable<T> {
         let item_count = items.iter().count();
         let chances = vec![1 as u32; item_count];
         LootTable {
@@ -27,14 +27,14 @@ where
             items: items.to_vec(),
         }
     }
-    fn chance_for(&self, item: &T) -> f32 {
+    pub fn chance_for(&self, item: &T) -> f32 {
         let position = self.items.iter().position(|i| i == item);
         match position {
             Some(idx) => self.chances[idx] as f32 / self.sum_of_chances as f32,
             None => 0.,
         }
     }
-    fn roll(&mut self) -> &T {
+    pub fn roll(&mut self) -> &T {
         let choice = self.rng.gen::<u32>() % self.sum_of_chances;
 
         let mut accumulator = 0;
