@@ -1,0 +1,7 @@
+[package]
+authors = ["Henri Lunnikivi <henri.lunnikivi@gmail.com>"]
+name = "loot-table"
+version = "0.1.0"
+
+[dependencies]
+rand = "0.3.18"
