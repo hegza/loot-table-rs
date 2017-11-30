@@ -1,6 +1,6 @@
+use super::*;
 #[cfg(test)]
 use Item;
-use super::*;
 
 #[derive(Clone, PartialEq, Eq)]
 struct TestItem(i32);
