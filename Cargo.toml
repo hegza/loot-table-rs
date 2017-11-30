@@ -1,8 +1,13 @@
 [package]
-authors = ["Henri Lunnikivi <henri.lunnikivi@gmail.com>"]
 name = "loot-table"
 version = "0.1.0"
+authors = ["Henri Lunnikivi <henri.lunnikivi@gmail.com>"]
 license = "MIT"
+description = "Loot tables for RPG's, roguelikes, and such"
+repository = "https://github.com/hegza/loot-table-rs"
+readme = "README.md"
+keywords = ["game", "rpg", "roguelike"]
 
 [dependencies]
 rand = "0.3.18"
+
